@@ -2,6 +2,8 @@ package br.com.dio.model;
 
 import java.util.Collection;
 import java.util.List;
+import javax.swing.Timer;
+import java.awt.Color;
 
 import static br.com.dio.model.GameStatusEnum.COMPLETE;
 import static br.com.dio.model.GameStatusEnum.INCOMPLETE;
@@ -29,6 +31,23 @@ public class Board {
         return spaces.stream().flatMap(Collection::stream).anyMatch(s -> isNull(s.getActual())) ? INCOMPLETE : COMPLETE;
     }
 
+    public void animateSpace(int row, int col) {
+        System.out.println("✨ Número colocado na posição [" + row + "," + col + "]!");
+
+        // Piscar no console
+        Timer timer = new Timer(200, null);
+        final int[] count = {0};
+
+        timer.addActionListener(e -> {
+            if (count[0] < 3) {
+                System.out.println("💫 BLINK!");
+                count[0]++;
+            } else {
+                ((Timer)e.getSource()).stop();
+            }
+        });
+        timer.start();
+    }
     public boolean hasErrors(){
         if(getStatus() == NON_STARTED){
             return false;

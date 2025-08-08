@@ -18,6 +18,7 @@ public class Main {
 
     private final static Scanner scanner = new Scanner(System.in);
 
+
     private static Board board;
 
     private final static int BOARD_LIMIT = 9;
@@ -76,8 +77,89 @@ public class Main {
 
         board = new Board(spaces);
         System.out.println("O jogo está pronto para começar");
-    }
 
+        board.animateSpace(0, 0);
+        board.animateSpace(0, 1);
+        board.animateSpace(0, 2);
+        board.animateSpace(0, 3);
+        board.animateSpace(0, 4);
+        board.animateSpace(0, 5);
+        board.animateSpace(0, 6);
+        board.animateSpace(0, 7);
+        board.animateSpace(0, 8);
+        board.animateSpace(1, 0);
+        board.animateSpace(1, 1);
+        board.animateSpace(1, 2);
+        board.animateSpace(1, 3);
+        board.animateSpace(1, 4);
+        board.animateSpace(1, 5);
+        board.animateSpace(1, 6);
+        board.animateSpace(1, 7);
+        board.animateSpace(1, 8);
+        board.animateSpace(2, 0);
+        board.animateSpace(2, 1);
+        board.animateSpace(2, 2);
+        board.animateSpace(2, 3);
+        board.animateSpace(2, 4);
+        board.animateSpace(2, 5);
+        board.animateSpace(2, 6);
+        board.animateSpace(2, 7);
+        board.animateSpace(2, 8);
+        board.animateSpace(3, 0);
+        board.animateSpace(3, 1);
+        board.animateSpace(3, 2);
+        board.animateSpace(3, 3);
+        board.animateSpace(3, 4);
+        board.animateSpace(3, 5);
+        board.animateSpace(3, 6);
+        board.animateSpace(3, 7);
+        board.animateSpace(3, 8);
+        board.animateSpace(4, 0);
+        board.animateSpace(4, 1);
+        board.animateSpace(4, 2);
+        board.animateSpace(4, 3);
+        board.animateSpace(4, 4);
+        board.animateSpace(4, 5);
+        board.animateSpace(4, 6);
+        board.animateSpace(4, 7);
+        board.animateSpace(4, 8);
+        board.animateSpace(5, 0);
+        board.animateSpace(5, 1);
+        board.animateSpace(5, 2);
+        board.animateSpace(5, 3);
+        board.animateSpace(5, 4);
+        board.animateSpace(5, 5);
+        board.animateSpace(5, 6);
+        board.animateSpace(5, 7);
+        board.animateSpace(5, 8);
+        board.animateSpace(6, 0);
+        board.animateSpace(6, 1);
+        board.animateSpace(6, 2);
+        board.animateSpace(6, 3);
+        board.animateSpace(6, 4);
+        board.animateSpace(6, 5);
+        board.animateSpace(6, 6);
+        board.animateSpace(6, 7);
+        board.animateSpace(6, 8);
+        board.animateSpace(7, 0);
+        board.animateSpace(7, 1);
+        board.animateSpace(7, 2);
+        board.animateSpace(7, 3);
+        board.animateSpace(7, 4);
+        board.animateSpace(7, 5);
+        board.animateSpace(7, 6);
+        board.animateSpace(7, 7);
+        board.animateSpace(7, 8);
+        board.animateSpace(8, 0);
+        board.animateSpace(8, 1);
+        board.animateSpace(8, 2);
+        board.animateSpace(8, 3);
+        board.animateSpace(8, 4);
+        board.animateSpace(8, 5);
+        board.animateSpace(8, 6);
+        board.animateSpace(8, 7);
+        board.animateSpace(8, 8);
+    }
 
     private static void inputNumber() {
         if (isNull(board)){
@@ -94,6 +176,8 @@ public class Main {
         if (!board.changeValue(col, row, value)){
             System.out.printf("A posição [%s,%s] tem um valor fixo\n", col, row);
         }
+
+
     }
 
     private static void removeNumber() {
@@ -177,7 +261,6 @@ public class Main {
         }
     }
 
-
     private static int runUntilGetValidNumber(final int min, final int max){
         var current = scanner.nextInt();
         while (current < min || current > max){
@@ -186,5 +269,4 @@ public class Main {
         }
         return current;
     }
-
 }
